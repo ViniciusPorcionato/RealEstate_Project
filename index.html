@@ -15,16 +15,18 @@
           alt=""
         />
         <nav class="navbar">
-          <a class="link" href="./index.html">Home</a>
-          <a class="link" href="./produtos.html">Produtos</a>
-          <a class="link" href="./contato.html">Contato</a>
+          <a onclick=mudancaPagina() class="link" href="./index.html">Home</a>
+          <a onclick=mudancaPagina() class="link" href="./produtos.html">Produtos</a>
+          <a onclick=mudancaPagina() class="link" href="./contato.html">Contato</a>
         </nav>
       </div>
     </header>
+
     <main>
       <section class="section-banner">
         <img class="banner" src="./assets/images/banner.png" alt="" />
       </section>
+
       <section class="sobre-nos">
         <div class="content-sobre-nos">
           <img
@@ -47,6 +49,7 @@
           </div>
         </div>
       </section>
+
       <section class="section-mapa">
         <h2 class="titulo-mapa">Nosso estabelecimento</h2>
         <p>Veja aonde nos encontrar</p>
@@ -118,7 +121,9 @@
           ></iframe>
         </div>
       </section>
+
     </main>
+
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
@@ -138,5 +143,12 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function mudancaPagina() {
+        alert("Redirecionando página")
+      }
+    </script>
+
   </body>
 </html>
