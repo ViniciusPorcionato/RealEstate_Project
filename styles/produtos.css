@@ -86,6 +86,12 @@ main {
     color: white;
 }
 
+.date{
+  font-size: 20px;
+  font-weight: bold;
+  color: #AF0404;
+}
+
 .lista-casas {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

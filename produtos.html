@@ -6,6 +6,31 @@
     <title>Imóveis Disponíveis</title>
     <link rel="stylesheet" href="./styles/produtos.css" />
     <script>
+      data = new Date();
+      dia = new Array(
+        "Domingo",
+        "Segunda-Feira",
+        "Terça-Feira",
+        "Quarta-Feira",
+        "Quinta-Feira",
+        "Sexta-Feira",
+        "Sábado"
+      );
+      mes = new Array(
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+      );
+
       // Função para abrir a POP de detalhes do imóvel
       function abrirDetalhes(titulo, imagem, descricao, preco, tipo) {
         const url = `pop_produtos.html?titulo=${encodeURIComponent(
@@ -16,7 +41,6 @@
         window.open(url, "_blank", "width=800,height=700");
       }
     </script>
-
   </head>
   <body>
     <header class="header">
@@ -44,6 +68,20 @@
           <label for="venda">Venda</label>
           <input type="radio" id="aluguel" name="filtro" />
           <label for="aluguel">Aluguel</label>
+
+          <p class="date">
+            <script>
+              document.write(
+                dia[data.getDay()] +
+                  ", " +
+                  data.getDate() +
+                  " de " +
+                  mes[data.getMonth()] +
+                  " de " +
+                  data.getFullYear()
+              );
+            </script>
+          </p>
         </div>
 
         <div class="lista-casas">
@@ -130,7 +168,7 @@
             <p>2 quartos, 1 banheiro, vista para o mar</p>
             <p class="preco">R$ 1.200/mês</p>
           </div>
-          
+
           <div
             class="casa"
             data-tipo="venda"
@@ -217,7 +255,6 @@
           <!-- Adicione os outros imóveis seguindo o mesmo padrão -->
         </div>
       </section>
-      
     </main>
 
     <footer class="footer">
@@ -234,7 +271,7 @@
           <nav class="footer-navbar">
             <a href="" class="footer-link">Termos de Serviço</a>
             <a href="" class="footer-link">Política de Privacidade</a>
-            <a href="" class="footer-link">Contato</a>
+            <a href="contato.html" class="footer-link">Contato</a>
           </nav>
         </div>
       </div>
